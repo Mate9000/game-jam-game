@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dqafdvs0uxskg"]
+[gd_scene load_steps=11 format=3 uid="uid://dqafdvs0uxskg"]
 
 [ext_resource type="Texture2D" uid="uid://7mujg8gpdq61" path="res://Assets/pixilart-spritebbb.png" id="1_4ggqf"]
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_mqqp2"]
@@ -21,6 +21,42 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gcoh8"]
 size = Vector2(12, 55)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_3o712"]
+atlas = ExtResource("1_4ggqf")
+region = Rect2(0, 0, 147, 251)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nswn7"]
+atlas = ExtResource("1_4ggqf")
+region = Rect2(147, 0, 147, 251)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8nnra"]
+atlas = ExtResource("1_4ggqf")
+region = Rect2(294, 0, 147, 251)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3rl33"]
+atlas = ExtResource("1_4ggqf")
+region = Rect2(441, 0, 147, 251)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1uxk6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3o712")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nswn7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8nnra")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3rl33")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="player01" type="CharacterBody2D"]
 script = ExtResource("1_mqqp2")
 
@@ -31,3 +67,8 @@ sprite_frames = SubResource("SpriteFrames_3xvif")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(20, 41.5)
 shape = SubResource("RectangleShape2D_gcoh8")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+position = Vector2(168, 75)
+sprite_frames = SubResource("SpriteFrames_1uxk6")
+frame_progress = 0.180977
