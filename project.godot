@@ -14,3 +14,7 @@ config/name="GameJam"
 run/main_scene="res://Scenes/game.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://Assets/icon.svg"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
