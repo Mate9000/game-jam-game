@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://c38nn7r62jd74"]
+
+[ext_resource type="Texture2D" uid="uid://btvd0487kmkni" path="res://Assets/sprite goeie.png" id="1_dg3ki"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_42og4"]
+atlas = ExtResource("1_dg3ki")
+region = Rect2(0, 62, 147, 62)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q5r53"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_42og4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e34nv"]
+size = Vector2(12, 26)
+
+[node name="player02" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(43, 31)
+sprite_frames = SubResource("SpriteFrames_q5r53")
+frame_progress = 0.0186892
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(16, 47)
+shape = SubResource("RectangleShape2D_e34nv")

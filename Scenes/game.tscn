@@ -1,22 +1,40 @@
-[gd_scene load_steps=3 format=3 uid="uid://bcetc534oqubh"]
+[gd_scene load_steps=5 format=3 uid="uid://bcetc534oqubh"]
 
 [ext_resource type="PackedScene" uid="uid://dqafdvs0uxskg" path="res://Scenes/character_body_2d.tscn" id="1_ql6mx"]
+[ext_resource type="Texture2D" uid="uid://rt2jw6qogdb2" path="res://Assets/pixil-frame-0.png" id="2_nys73"]
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qloqx"]
-distance = -81.0
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8pau3"]
+normal = Vector2(0.999985, -0.00540533)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_3mrqy"]
+distance = 1.0
 
 [node name="Game" type="Node2D"]
 
-[node name="player01" parent="." instance=ExtResource("1_ql6mx")]
-position = Vector2(-1, 0)
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(22, -12)
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(19, 40)
-zoom = Vector2(2, 2)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(-9, 304)
+shape = SubResource("WorldBoundaryShape2D_8pau3")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(28, -4)
+position = Vector2(350, 395)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-10, 8)
-shape = SubResource("WorldBoundaryShape2D_qloqx")
+position = Vector2(0, 2)
+shape = SubResource("WorldBoundaryShape2D_3mrqy")
+
+[node name="player01" parent="." instance=ExtResource("1_ql6mx")]
+position = Vector2(2, -24)
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(422, 76)
+
+[node name="Pixil-frame-0" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(350, 205)
+texture = ExtResource("2_nys73")
