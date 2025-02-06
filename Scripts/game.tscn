@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://deqd5dswtfpb2"]
+[gd_scene load_steps=2 format=3 uid="uid://bb8v66bpvkvww"]
 
-[ext_resource type="Script" path="res://TitleScreen.gd" id="1_keiuq"]
+[ext_resource type="Script" path="res://TitleScreen.gd" id="1_q4bq4"]
 
 [node name="TitleScreen" type="Control"]
 layout_mode = 3
@@ -9,7 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_keiuq")
+script = ExtResource("1_q4bq4")
 
 [node name="StartButton" type="Button" parent="."]
 layout_mode = 0
