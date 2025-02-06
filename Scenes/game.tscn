@@ -36,5 +36,5 @@ position = Vector2(2, -24)
 position = Vector2(422, 76)
 
 [node name="Pixil-frame-0" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(350, 205)
+position = Vector2(616, 99)
 texture = ExtResource("2_nys73")
