@@ -1,7 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://bcetc534oqubh"]
+[gd_scene load_steps=7 format=3 uid="uid://bcetc534oqubh"]
 
 [ext_resource type="PackedScene" uid="uid://dqafdvs0uxskg" path="res://Scenes/character_body_2d.tscn" id="1_ql6mx"]
+[ext_resource type="Texture2D" uid="uid://cltra20jdc8f5" path="res://Assets/background 2.png" id="2_i1vbv"]
 [ext_resource type="Texture2D" uid="uid://rt2jw6qogdb2" path="res://Assets/pixil-frame-0.png" id="2_nys73"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_o1st3"]
+normal = Vector2(-1, 0)
+distance = 3.0
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8pau3"]
 normal = Vector2(0.999985, -0.00540533)
@@ -11,6 +16,12 @@ distance = 1.0
 
 [node name="Game" type="Node2D"]
 
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(3275, 289)
+shape = SubResource("WorldBoundaryShape2D_o1st3")
+
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
 position = Vector2(22, -12)
 
@@ -19,22 +30,40 @@ position = Vector2(-9, 304)
 shape = SubResource("WorldBoundaryShape2D_8pau3")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(350, 395)
+position = Vector2(323, 461)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(0, 2)
+position = Vector2(12, -39)
 shape = SubResource("WorldBoundaryShape2D_3mrqy")
 
 [node name="player01" parent="." instance=ExtResource("1_ql6mx")]
-position = Vector2(2, -24)
+position = Vector2(3, 278)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(422, 76)
+[node name="Background3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(2234, 225)
+scale = Vector2(1, 1.1)
+texture = ExtResource("2_i1vbv")
+
+[node name="Background2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(938, 225)
+scale = Vector2(1, 1.1)
+texture = ExtResource("2_i1vbv")
+
+[node name="Pixil-frame-1" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(1638, 225)
+scale = Vector2(1, 1.1)
+texture = ExtResource("2_nys73")
 
 [node name="Pixil-frame-0" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(348, 205)
+position = Vector2(350, 225)
+scale = Vector2(1, 1.1)
+texture = ExtResource("2_nys73")
+
+[node name="Pixil-frame-2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(2931, 225)
+scale = Vector2(1, 1.1)
 texture = ExtResource("2_nys73")
