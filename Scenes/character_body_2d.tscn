@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dqafdvs0uxskg"]
+[gd_scene load_steps=11 format=3 uid="uid://dqafdvs0uxskg"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_mqqp2"]
 [ext_resource type="Texture2D" uid="uid://41aj8gwknbxq" path="res://Assets/pixilart-sprite (5).png" id="3_ecy1e"]
@@ -222,6 +222,9 @@ _data = {
 "running": SubResource("Animation_5yb4o")
 }
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_00nc4"]
+height = 58.0
+
 [node name="player01" type="CharacterBody2D"]
 script = ExtResource("1_mqqp2")
 
@@ -247,3 +250,13 @@ libraries = {
 "": SubResource("AnimationLibrary_16jcm")
 }
 autoplay = "idle"
+
+[node name="HurtBox" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+position = Vector2(51, -7)
+shape = SubResource("CapsuleShape2D_00nc4")
+
+[connection signal="body_entered" from="HurtBox" to="." method="_on_hurt_box_body_entered"]

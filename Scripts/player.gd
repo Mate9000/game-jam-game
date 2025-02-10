@@ -43,3 +43,8 @@ func _physics_process(delta: float) -> void:
 
 	# Optional: Print the velocity for debugging
 	print(velocity)
+
+
+func _on_HurtBox_body_entered(body: Node2D):
+	if body.is_in_group("enemy"):#  Replace with function body.
+	print ("enemy entered")
