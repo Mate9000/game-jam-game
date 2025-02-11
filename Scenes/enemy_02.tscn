@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dr7qrjotftrum" path="res://Assets/pixilart-sprite (6).png" id="2_p8jae"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gru3e"]
-size = Vector2(16, 64)
+size = Vector2(20, 64)
 
 [sub_resource type="Animation" id="Animation_5uovl"]
 resource_name = "idle"
@@ -176,12 +176,13 @@ height = 64.0
 script = ExtResource("1_r2xvc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(45, -13)
+position = Vector2(-5, -12)
+scale = Vector2(1.388, 1)
 texture = ExtResource("1_kmm3f")
 hframes = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-7, 3)
+position = Vector2(25, 26)
 shape = SubResource("RectangleShape2D_gru3e")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -191,8 +192,9 @@ libraries = {
 autoplay = "idle"
 
 [node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-1, 1)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-7, 3)
+position = Vector2(26, 26)
 shape = SubResource("CapsuleShape2D_e3ouy")
 debug_color = Color(0.892736, 0.000230065, 0.78633, 0.42)

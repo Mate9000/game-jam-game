@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://bcetc534oqubh"]
+[gd_scene load_steps=9 format=3 uid="uid://bcetc534oqubh"]
 
 [ext_resource type="PackedScene" uid="uid://dqafdvs0uxskg" path="res://Scenes/character_body_2d.tscn" id="1_ql6mx"]
 [ext_resource type="Texture2D" uid="uid://cltra20jdc8f5" path="res://Assets/background 2.png" id="2_i1vbv"]
 [ext_resource type="Texture2D" uid="uid://rt2jw6qogdb2" path="res://Assets/pixil-frame-0.png" id="2_nys73"]
 [ext_resource type="PackedScene" uid="uid://c875uxf7d8tav" path="res://Scenes/enemy_01.tscn" id="4_vofbl"]
+[ext_resource type="PackedScene" uid="uid://ubdf6egrnqxj" path="res://Scenes/enemy_03.tscn" id="5_oyofm"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_o1st3"]
 normal = Vector2(-1, 0)
@@ -69,4 +70,8 @@ position = Vector2(2931, 225)
 scale = Vector2(1, 1.1)
 texture = ExtResource("2_nys73")
 
+[node name="enemy03" parent="." instance=ExtResource("5_oyofm")]
+position = Vector2(1790, 352)
+
 [node name="enemy01" parent="." instance=ExtResource("4_vofbl")]
+position = Vector2(1052, 350)
