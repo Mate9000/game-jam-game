@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://wf56f3emaq5m"]
+[gd_scene load_steps=10 format=3 uid="uid://wf56f3emaq5m"]
 
 [ext_resource type="Texture2D" uid="uid://bjarylqgtcl36" path="res://Assets/Guard 2 sheet sprite.png" id="1_kmm3f"]
+[ext_resource type="Script" path="res://Scenes/enemy_02.gd" id="1_r2xvc"]
 [ext_resource type="Texture2D" uid="uid://dr7qrjotftrum" path="res://Assets/pixilart-sprite (6).png" id="2_p8jae"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gru3e"]
@@ -171,7 +172,8 @@ _data = {
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e3ouy"]
 height = 64.0
 
-[node name="enemy02" type="CharacterBody2D"]
+[node name="enemy02" type="CharacterBody2D" groups=["Enemy"]]
+script = ExtResource("1_r2xvc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(45, -13)

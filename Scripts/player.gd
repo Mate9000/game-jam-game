@@ -8,6 +8,7 @@ const JUMP_VELOCITY = -500.0
 
 # State variables
 var is_jumping = false
+var health = 100  # Player's health
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -44,7 +45,17 @@ func _physics_process(delta: float) -> void:
 	# Optional: Print the velocity for debugging
 	print(velocity)
 
-
 func _on_HurtBox_body_entered(body: Node2D):
-	if body.is_in_group("enemy"):#  Replace with function body.
-	print ("enemy entered")
+	if body.is_in_group("Enemy"):
+		print("Enemy entered")
+		take_damage(10)  # Adjust damage as needed
+
+func take_damage(amount: int) -> void:
+	health -= amount
+	print("Player took damage! Health: ", health)
+	if health <= 0:
+		die()
+
+func die() -> void:
+	print("Player has died!")
+	queue_free()  # Remove the player from the scene

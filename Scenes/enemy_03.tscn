@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://ubdf6egrnqxj"]
+[gd_scene load_steps=9 format=3 uid="uid://ubdf6egrnqxj"]
 
+[ext_resource type="Script" path="res://Scenes/enemy_03.gd" id="1_bxas5"]
 [ext_resource type="Texture2D" uid="uid://ewf3cy1cipw" path="res://Assets/guard lopen goeie sprite white.png" id="1_ct6c8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wyiut"]
@@ -169,7 +170,8 @@ _data = {
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ednr0"]
 height = 76.0
 
-[node name="enemy03" type="CharacterBody2D"]
+[node name="enemy03" type="CharacterBody2D" groups=["Enemy"]]
+script = ExtResource("1_bxas5")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(23, 36)
