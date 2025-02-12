@@ -288,12 +288,10 @@ texture = ExtResource("3_ecy1e")
 hframes = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(51, -8)
 shape = SubResource("RectangleShape2D_gcoh8")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-visible = false
 position = Vector2(356, 198)
 zoom = Vector2(1.6, 1.6)
 limit_left = 0
@@ -308,12 +306,10 @@ libraries = {
 autoplay = "idle"
 
 [node name="HurtBox" type="Area2D" parent="."]
-visible = false
 collision_layer = 2
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
-visible = false
 position = Vector2(51, -7)
 shape = SubResource("CapsuleShape2D_00nc4")
 debug_color = Color(0.916315, 7.64316e-05, 0.709691, 0.42)

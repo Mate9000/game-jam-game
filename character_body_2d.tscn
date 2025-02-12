@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cfkmxsyjwkey1"]
+[gd_scene load_steps=18 format=3 uid="uid://dqqw8jfbvamux"]
 
 [ext_resource type="Script" path="res://character_body_2d.gd" id="1_ic1ov"]
 [ext_resource type="Texture2D" uid="uid://dkenogm5qdldr" path="res://Scenes/sprite goeie guard.png" id="2_47hag"]

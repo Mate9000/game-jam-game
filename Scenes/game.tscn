@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dqafdvs0uxskg" path="res://Scenes/character_body_2d.tscn" id="1_ql6mx"]
 [ext_resource type="Texture2D" uid="uid://cltra20jdc8f5" path="res://Assets/background 2.png" id="2_i1vbv"]
 [ext_resource type="Texture2D" uid="uid://rt2jw6qogdb2" path="res://Assets/pixil-frame-0.png" id="2_nys73"]
-[ext_resource type="PackedScene" uid="uid://cfkmxsyjwkey1" path="res://character_body_2d.tscn" id="4_p6s4w"]
+[ext_resource type="PackedScene" uid="uid://dqqw8jfbvamux" path="res://character_body_2d.tscn" id="4_p6s4w"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_o1st3"]
 normal = Vector2(-1, 0)
