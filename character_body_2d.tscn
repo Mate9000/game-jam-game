@@ -1,8 +1,8 @@
 [gd_scene load_steps=18 format=3 uid="uid://dqqw8jfbvamux"]
 
 [ext_resource type="Script" path="res://character_body_2d.gd" id="1_ic1ov"]
-[ext_resource type="Texture2D" path="res://Scenes/sprite goeie guard.png" id="2_47hag"]
-[ext_resource type="Texture2D" path="res://Assets/guard slaan sheet.png" id="3_3hh4x"]
+[ext_resource type="Texture2D" uid="uid://dkenogm5qdldr" path="res://Scenes/sprite goeie guard.png" id="2_47hag"]
+[ext_resource type="Texture2D" uid="uid://c3qaih7t4w6mj" path="res://Assets/guard slaan sheet.png" id="3_3hh4x"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_heshm"]
 atlas = ExtResource("2_47hag")
